@@ -1,317 +1,196 @@
-# SUN LITE LTD — Petroleum Products Supply Company
+# SUN LITE LTD — Complete Project Structure
 
 > **Energy Supply, Built Around Reliability**
 
-SUN LITE LTD is a Nigerian petroleum products supply company headquartered in Lagos. We specialize in delivering premium Diesel (AGO), Fuel (PMS), and Kerosene (DPK) with a focus on dependable service, coordinated delivery, and marine diesel supply.
+This directory represents the **reorganized SUN LITE LTD digital platform** with a clean, production-ready architecture that follows modern frontend development best practices.
 
-## Project Overview
-
-This is a premium, Apple-standard corporate website designed to transform SUN LITE LTD from a conventional information site into a globally credible, professional energy supply platform that emphasizes reliability, operational confidence, and customer trust.
-
-The website serves as both a commercial showcase for international B2B clients and a conversion-focused digital experience that generates qualified supply inquiries.
-
-## 🌐 Live Demo
-
-https://sunlite-energy.com
-
-## 🎯 Core Business Mission
-
-**Reliable petroleum products supply for businesses, institutions, fuel stations, and marine operations across Lagos State and Nigeria.**
-
-The digital experience must:
-
-- Establish corporate credibility through verified compliance and certifications
-- Clearly communicate what SUN LITE LTD supplies and their differentiators
-- Make Diesel the dominant product proposition
-- Present Marine Diesel Supply as a specialist capability
-- Generate qualified supply enquiries
-- Make contacting the company effortless
-- Create a premium visual identity suitable for B2B customers
-- Build trust without unsupported marketing claims
-
-## 🏗️ Architecture
-
-### Tech Stack
-
-**Frontend:**
-- React 19 with TypeScript
-- Vite (bundle analyzer, HMR)
-- Tailwind CSS 4 (utility-first, design tokens)
-- Heroicons (outline, accessible SVG icons)
-- Framer Motion (smooth micro-interactions)
-- React Hook Form + Zod (form validation)
-- Intersection Observer API (scroll reveals)
-
-**Backend (Future):**
-- Node.js/Express (form processing, email services)
-- PostgreSQL (enquiry database)
-- Redis (caching, session management)
-- AWS/Supabase (hosted services)
-- Resend (email delivery)
-
-**DevOps:**
-- GitHub Actions (CI/CD)
-- Vercel (deployment, edge functions)
-- Turbopack (optimized bundling)
-- Lighthouse CI (performance monitoring)
-
-### Component Architecture
-
-**Core Components (17+):**
-- Hero (full-screen editorial)
-- Trust Bar (certifications, credibility)
-- About Section (company narrative)
-- Network Stats (map visualization)
-- Products Section (3-module showcase)
-- Marine Section (specialized division)
-- Services Section (6 capability cards)
-- Coverage Matrix (client sectors)
-- Operational Hubs (3 Lagos locations)
-- Compliance Section (4 verification modules)
-- Leadership & CSR (executive message)
-- FAQ Section (searchable questions)
-- Request Supply (step-by-step flow)
-- Supply Modal (quick requisition)
-- Footer (corporate details)
-- Header (adaptive navigation)
-- SunliteLogo (branded identity)
-
-**Design System:**
-- CSS Custom Properties (design tokens)
-- Tailwind CSS utilities (layout, spacing, typography)
-- Component variants and states
-- Responsive design patterns
-- Animation and micro-interaction library
-
-### Data Architecture
-
-**Company Data:**
-- `src/data/companyData.ts` - Business info, compliance, certifications
-- `src/data/assets.ts` - Generated photography (source of truth)
-- `src/data/contactInfo.ts` - Communication channels
-
-**Product Specifications:**
-- ASTM/NIS standard compliance
-- Density specifications (0.820–0.855 g/cm³)
-- Cetane index requirements
-- Storage and handling protocols
-
-**Marine Operations:**
-- Bunkering procedures and certifications
-- Port berth coordinates and schedules
-- Vessel types and capacities
-- Environmental compliance
-
-## 🎨 Design DNA
-
-### Visual Philosophy
-
-**Industrial Strength with Apple-Level Simplicity**
-- Combine oil & gas visual authority with minimalist design
-- Swiss-style typography with clear hierarchy
-- Premium photography with cinematic quality
-- Editorial layout with purposeful white space
-- Smooth motion that conveys meaning
-- Consistent branding across all touchpoints
-
-### Color System
-
-**Primary Palette:**
-- `SUN LITE Midnight` (#07141d) - Headers, dark sections, footer
-- `Deep Energy Blue` (#0D2430) - Secondary dark surfaces, cards
-- `SUN LITE Energy Gold` (#F3B51B) - CTAs, highlights, emphasis
-- `Light Gold` (#FFD76A) - Hover states, accents
-- `Cloud` (#F6F8F9) - Light background surface
-- `Slate` (#65757D) - Secondary text
-- `White` (#FFFFFF) - Primary content surface
-
-### Typography Hierarchy
-
-**Desktop:**
-- Hero: 72–96px, weight 600–700, tight tracking (1.02)
-- H2: 48–64px
-- H3: 28–32px
-- Body: 16–19px, line-height 1.55–1.75
-- Eyebrow: 11–13px, uppercase, 0.16em tracking
-
-**Mobile:**
-- Hero: 44–58px
-- H2: 36–44px
-- H3: 22–28px
-- Body: 16–19px
-
-**Fonts:**
-- Primary: Inter, SF Pro Display, Apple SD Gothic Neo
-- Fallback: -apple-system, BlinkMacSystemFont, "Helvetica Neue"
-- Mono: SF Mono, Monaco, Cascadia Code
-
-### Layout System
-
-**Container:**
-- Max-width: 1200–1320px
-- Desktop padding: 32–48px
-- Tablet padding: 24–32px
-- Mobile padding: 20px
-
-**Grid System:**
-- 12-column grid for desktop
-- Variable gutter spacing
-- Component cards: 16–24px radius, 24–32px padding
-- Vertical rhythm: 12/24/48/80/120px
-
-### Animation System
-
-**Micro-interactions:**
-- Duration: 150–300ms (buttons, cards)
-- Easing: cubic-bezier(0.22, 1, 0.36, 1)
-- Spring physics for natural feel
-- Exit animations faster than entrance (60–70% duration)
-
-**Scroll Effects:**
-- IntersectionObserver for section reveals
-- Parallax effects with reduced-motion support
-- Staggered animations for lists
-
-## 🚀 Features
-
-### Core Features
-
-**1. Premium Visual Identity**
-- Apple-standard design system
-- Industrial photography and cinematography
-- Editorial storytelling approach
-- Responsive mobile-first layout
-
-**2. Operational Credibility**
-- Verified compliance badges (CAC, TIN, ASTM standards)
-- 3 Lagos operational hubs with detailed maps
-- Quality assurance and batch certification display
-- Marine bunkering with vessel coordination
-
-**3. Conversion Optimization**
-- Multi-step request supply flow
-- Instant WhatsApp dispatch capability
-- Email requisition with template preparation
-- Reference tracking and copy-to-clipboard
-
-**4. Advanced UX**
-- Smooth scroll navigation with hash links
-- Loading states and skeleton screens
-- Form validation with real-time feedback
-- Mobile-first touch targets (>=44pt)
-
-**5. Performance & Accessibility**
-- Core Web Vitals optimized
-- WCAG 2.2 AA compliance
-- Screen reader support
-- Reduced motion preferences
-- Lighthouse score targets: 90+
-
-### Marketing Features
-
-**Trust Building:**
-- Corporate certifications and regulatory compliance
-- Customer case studies (implementation only)
-- Industry partnerships and affiliations
-- Local and international reach indicators
-
-**Product Education:**
-- Technical specifications with lab testing
-- Use case examples and applications
-- Compliance and safety information
-- Supply capability demonstration
-
-**Lead Generation:**
-- Multi-channel communication (phone, email, WhatsApp)
-- Automated quote generation
-- Quote tracking and status updates
-- Quick inquiry modals
-
-### Technical Features
-
-**Performance:**
-- Code splitting with route-based loading
-- Image optimization (WebP/AVIF)
-- Preloading critical resources
-- Service worker for offline support
-- CDN distribution with edge caching
-
-**Security:**
-- Form validation and sanitization
-- Rate limiting on endpoints
-- HTTPS everywhere
-- CSRF protection
-- Input sanitization
-
-**Analytics:**
-- User journey tracking
-- Conversion funnel analysis
-- Performance monitoring
-- A/B testing framework
-
-## 📦 Project Structure
+## 📁 Project Structure Overview
 
 ```
-/
-├── public/
-│   ├── index.html
-│   └── assets/              # Static images, icons, etc.
+SUN LITE LTD Digital Platform
+├── docs/                          # Documentation & Architecture
+│   ├── architecture.md           # Technical architecture decisions
+│   ├── design-tokens.md          # Design system documentation
+│   └── deployment.md             # Production deployment guides
 │
-├── src/
-│   ├── assets/             # Generated photography (source of truth)
-│   │   ├── images/
-│   │   └── svgs/
-│   ├── components/         # All UI components (17+)
-│   │   ├── Header.tsx
-│   │   ├── Hero.tsx
-│   │   ├── AboutSection.tsx
-│   │   ├── ... (14 more)
+├── scripts/                       # Build & Automation tools
+│   ├── build-optimized.js        # Production build script
+│   ├── validate-tokens.js        # Design token validation
+│   └── image-optimizer.js        # Image optimization pipeline
+│
+├── public/                        # Static assets
+│   ├── index.html                # Root HTML template
+│   └── assets/                   # Fallback images, icons, etc.
+│
+├── src/                           # Application source code
+│   ├── components/               # All UI components (17 total)
+│   │   ├── 01-header.tsx         # Fixed navigation bar
+│   │   ├── 02-hero.tsx           # Editorial hero section
+│   │   ├── 03-about-section.tsx  # Company narrative
+│   │   ├── 04-trust-bar.tsx       # Credibility strip
+│   │   ├── 05-network-stats.tsx   # Map visualization
+│   │   ├── 06-products-section.tsx # Product showcase
+│   │   ├── 07-marine-section.tsx # Marine division
+│   │   ├── 08-services-section.tsx # Service capabilities
+│   │   ├── 09-coverage-matrix.tsx # Client sectors
+│   │   ├── 10-operational-hubs.tsx # Lagos locations
+│   │   ├── 11-compliance-section.tsx # 4 verification modules
+│   │   ├── 12-leadership-csr.tsx # Executive message
+│   │   ├── 13-faq-section.tsx     # Searchable questions
+│   │   ├── 14-request-supply.tsx # Step-by-step flow
+│   │   ├── 15-supply-modal.tsx    # Quick requisition modal
+│   │   ├── 16-footer.tsx          # Corporate footer
+│   │   └── 17-sunlite-logo.tsx    # Branded identity
 │   │
-│   ├── data/              # Application data
-│   │   ├── companyData.ts   # Business info, compliance
-│   │   ├── assets.ts       # Image references
-│   │   └── contactInfo.ts
+│   ├── data/                     # Application data & configuration
+│   │   ├── company-data.ts        # Business info, compliance
+│   │   ├── assets.ts             # Image references
+│   │   └── contact-info.ts        # Communication channels
 │   │
-│   ├── types.ts           # Type definitions
-│   ├── design-system.css   # Design tokens + utilities
-│   ├── main.tsx           # Root entry point
-│   └── App.tsx            # Main application
+│   ├── design-system.css         # Complete design tokens + utilities
+│   ├── main.tsx                  # React entry point
+│   ├── app.tsx                   # Main application component
+│   └── types.ts                   # TypeScript definitions
 │
-├── scripts/                # Build and automation tools
-│   ├── build-optimized.js
-│   ├── validate-tokens.js
-│   └── image-optimizer.js
+├── assets/                        # Generated photography (source of truth)
+│   ├── images/                   # High-resolution photography
+│   │   ├── refinery-hero-dusk-1789390838980.jpg
+│   │   ├── sunlite-tanker-truck-1789390856974.jpg
+│   │   ├── white-storage-tanks-1789390894565.jpg
+│   │   ├── pipeline-manifold-depot-1789390911610.jpg
+│   │   └── marine-bunkering-port-1789390928303.jpg
+│   └── svgs/                     # Icon library
+│       └── heroicons/            # All Heroicons variants
 │
-├── package.json
-├── vite.config.ts
-├── tsconfig.json
-└── README.md
+├── package.json                  # Project dependencies & scripts
+├── vite.config.ts                 # Vite build configuration
+├── tsconfig.json                  # TypeScript configuration
+├── .env.example                   # Environment variables template
+├── .gitignore                     # Git ignore patterns
+├── README.md                      # Project documentation
+├── technical.md                   # Technical architecture
+└── design-upgrade.md             # Design specifications
 ```
 
-## 🔧 Development
+## 🏗️ Architecture Philosophy
 
-### Prerequisites
+### 1. Component-First Design
+- **Sequential numbering** for predictable import order
+- **Single responsibility** principle for each component
+- **Consistent prop patterns** across all components
+- **TypeScript-first** development
 
-Node.js 18+ (npm or pnpm preferred)
+### 2. Design System Integration
+- **CSS Custom Properties** for all design tokens
+- **Utility-first** styling with Tailwind
+- **Component variants** and state management
+- **Theme support** (light/dark modes ready)
 
-### Installation
+### 3. Performance Optimization
+- **Code splitting** with dynamic imports
+- **Image optimization** (WebP/AVIF)
+- **Tree shaking** for bundle reduction
+- **Lazy loading** for non-critical components
 
+### 4. Accessibility Compliance
+- **WCAG 2.2 AA** full compliance
+- **ARIA labels** for all interactive elements
+- **Keyboard navigation** support
+- **Screen reader** compatibility
+
+## 📂 Directory Contents
+
+### `docs/` — Architecture & Documentation
+
+**Purpose:** Maintain comprehensive technical documentation for developers, stakeholders, and future maintenance.
+
+**Files:**
+- `architecture.md` - Technical architecture decisions and patterns
+- `design-tokens.md` - Complete design system documentation
+- `deployment.md` - Production deployment procedures
+
+**Why here:** Documentation belongs in a dedicated `docs/` directory for easy access and version control.
+
+### `scripts/` — Build & Automation
+
+**Purpose:** Automated build processes, validation, and optimization tools.
+
+**Files:**
+- `build-optimized.js` - Production build with optimizations
+- `validate-tokens.js` - Design token compliance validation
+- `image-optimizer.js` - Image processing pipeline
+
+**Why here:** Build tools live in a dedicated `scripts/` directory for easy automation and CI/CD integration.
+
+### `public/` — Static Assets
+
+**Purpose:** Fallback assets, HTML templates, and static files.
+
+**Subdirectories:**
+- `assets/` - Fallback images, icons, and other static assets
+- `index.html` - Root HTML template (extends base for components)
+
+**Why here:** Static web assets belong in `public/` for optimal Vite handling and build optimization.
+
+### `src/components/` — UI Components
+
+**Purpose:** Complete component library with predictable naming and organization.
+
+**Component Naming Convention:**
+- **Numbered prefixes** (01-17) for import order
+- **Descriptive names** for maintainability
+- **Clear purpose** indicators
+
+**Example:** `02-hero.tsx` is imported before `03-about-section.tsx`
+
+**Why this structure:** Predictable ordering prevents circular dependencies and improves maintainability.
+
+### `src/data/` — Application Data
+
+**Purpose:** Centralized data management for the entire application.
+
+**Files:**
+- `company-data.ts` - Business information, compliance, certifications
+- `assets.ts` - All image references and asset mapping
+- `contact-info.ts` - Communication channels and contact methods
+
+**Why here:** Data belongs near components that consume it for better code organization.
+
+### `src/design-system.css` — Design System
+
+**Purpose:** Complete design token system, component styles, and utility classes.
+
+**Includes:**
+- **CSS Custom Properties** for all design tokens
+- **Component base styles** with variants
+- **Utility classes** for layout and spacing
+- **Animation definitions** and keyframe animations
+
+**Why here:** Design system is a core foundation that all components depend on.
+
+### `src/assets/images/` — Generated Photography
+
+**Purpose:** High-quality photography that serves as the visual foundation.
+
+**Image Files (Source of Truth):**
+- `refinery-hero-dusk-1789390838980.jpg` - Hero background
+- `sunlite-tanker-truck-1789390856974.jpg` - Product showcase
+- `white-storage-tanks-1789390894565.jpg` - Storage facilities
+- `pipeline-manifold-depot-1789390911610.jpg` - Infrastructure
+- `marine-bunkering-port-1789390928303.jpg` - Marine operations
+
+**Why here:** Photography sources belong near where they're used (components) and in a dedicated assets directory for version control.
+
+## 🔧 Development Workflow
+
+### Local Development
 ```bash
-# Clone repository
-cd sun-lite-ltd-petroleum-energy-supply
-
 # Install dependencies
 npm install  # or pnpm install
 
-# Run development server
-npm run dev  # runs on http://localhost:3000
-```
-
-### Build for Production
-
-```bash
-# Build for development (watch mode)
+# Start development server with HMR
 npm run dev
+# Opens http://localhost:3000
 
 # Build for production
 npm run build
@@ -319,34 +198,40 @@ npm run build
 # Preview production build
 npm run preview
 
-# Run linting
+# Type checking
 npm run lint
 ```
 
-### Available Scripts
+### Build Process
+1. **TypeScript compilation** with strict mode
+2. **Vite bundling** with optimized dependencies
+3. **Tailwind CSS** generation
+4. **Design token validation**
+5. **Image optimization**
+6. **Bundle analysis**
+7. **Lighthouse CI integration**
 
-- `npm run dev` - Start development server with HMR
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Type checking with TypeScript
+### Testing Strategy
+- **Unit Tests** (future): Component testing with Vitest
+- **Visual Tests**: Storybook for component variants
+- **Accessibility Tests**: Automated WCAG validation
+- **Performance Tests**: Lighthouse CI pipeline
+- **E2E Tests**: Cypress for user flows
 
-## 🚚 Deployment
+## 🚀 Deployment Strategy
 
 ### Vercel (Recommended)
+```bash
+# Deploy from GitHub Actions
+vercel --prod
 
-1. Create `vercel.json` with configuration
-2. Set environment variables:
-   - `VITE_API_URL` - Backend API endpoint
-   - `VITE_EMAIL_SERVICE` - Email service provider
-   - `VITE_ANALYTICS_ID` - Analytics tracking ID
-
-3. Deploy:
-   ```bash
-   vercel --prod
-   ```
+# Environment variables
+VITE_API_URL=https://api.sunlite-energy.com
+VITE_EMAIL_SERVICE=resend
+VITE_ANALYTICS_ID=G-A123456789
+```
 
 ### Docker Deployment
-
 ```bash
 # Build Docker image
 docker build -t sunlite-energy .
@@ -355,47 +240,40 @@ docker build -t sunlite-energy .
 docker run -p 3000:3000 sunlite-energy
 ```
 
-## 📸 Assets & Resources
+### GitHub Actions CI/CD
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy to Production
 
-### Image Sources (The Source of Truth)
+on:
+  push:
+    branches: [main]
 
-**Hero Background:**
-- Refinery at dusk (Unsplash: 1789390838980)
-- Industrial petroleum terminal
-- Modern energy infrastructure
-
-**Product Photography:**
-- White storage tanks (Unsplash: 1789390894565)
-- Branded tanker truck (Unsplash: 1789390856974)
-- Marine bunkering vessel (Unsplash: 1789390928303)
-- Pipeline manifold depot (Unsplash: 1789390911610)
-
-**Generated Assets:**
-- All images hosted on CDN
-- Optimized for WebP/AVIF
-- Lazy-loaded below the fold
-- Responsive srcset sets
-
-### Brand Assets
-
-**Logo System:**
-- Primary SVG emblem (engineered precision)
-- Full horizontal logo (SUN LITE LTD)
-- Icon-only badge variants
-
-**Color Palette:**
-- 7-color system (primary, secondary, accent, semantic)
-- Dark mode ready
-- WCAG 2.1 AA compliant
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm run build
+      - uses: vercel/action@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+```
 
 ## 📊 Performance Targets
 
 ### Core Web Vitals
-- **LCP (Largest Contentful Paint):** <2.5s
-- **FID (First Input Delay):** <100ms
-- **CLS (Cumulative Layout Shift):** <0.1
-- **FCP (First Contentful Paint):** <1.8s
-- **TTFB (Time to First Byte):** <0.8s
+- **LCP:** <2.5s (Largest Contentful Paint)
+- **FID:** <100ms (First Input Delay)
+- **CLS:** <0.1 (Cumulative Layout Shift)
+- **FCP:** <1.8s (First Contentful Paint)
+- **TTFB:** <0.8s (Time to First Byte)
 
 ### Lighthouse Scores (Target)
 - Performance: 90+
@@ -405,201 +283,254 @@ docker run -p 3000:3000 sunlite-energy
 - PWA: 80+
 
 ### Mobile Performance
-- 3G network loading time: <5s
-- Touch target size: 44×44pt minimum
-- Vertical scroll without horizontal overflow
-- No layout shift during content load
+- **3G Loading:** <5s
+- **Touch Targets:** 44×44pt minimum
+- **No Horizontal Scroll:** Mobile optimized
+- **Layout Stability:** <0.1 CLS
 
-## ♿ Accessibility
+## ♿ Accessibility Implementation
 
-### WCAG 2.2 AA Compliance
-- **Keyboard Navigation:** Full keyboard access
-- **Screen Readers:** Semantic HTML + ARIA labels
-- **Color Contrast:** 4.5:1 for normal text
-- **Focus Management:** Visible focus indicators
-- **Touch Targets:** Minimum 44×44pt
-- **Reduced Motion:** prefers-reduced-motion support
-- **Text Scaling:** System text scaling supported
+### WCAG 2.2 AA Compliance Checklist
+- [ ] **Keyboard Navigation** - Full keyboard access
+- [ ] **Screen Readers** - Semantic HTML + ARIA labels
+- [ ] **Color Contrast** - 4.5:1 for normal text
+- [ ] **Focus Management** - Visible focus indicators
+- [ ] **Touch Targets** - Minimum 44×44pt
+- [ ] **Reduced Motion** - Respects user preferences
+- [ ] **Screen Reader Support** - Semantic structure
 
-### Accessibility Features
-- Skip navigation links
-- ARIA labels for icons
-- Semantic button and link usage
-- Form validation announcements
-- Keyboard trap prevention for modals
-- High contrast mode support
-
-## 🔄 Multi-Platform Support
-
-### Responsive Breakpoints
-
-```css
-- mobile: < 375px (iPhone SE, small phones)
-- tablet: 376–768px (iPad mini, tablets)
-- laptop: 769–1024 px (small laptops)
-- desktop: 1025–1440 px (standard monitors)
-- wide: 1441+ px (large displays)
+### Component Accessibility Standards
+```typescript
+// Component accessibility interface
+interface AccessibleComponent {
+  // ARIA labels for screen readers
+  'aria-label'?: string;
+  'aria-describedby'?: string;
+  'role'?: string;
+  
+  // Keyboard navigation support
+  tabIndex?: number;
+  onKeyDown?: (event: KeyboardEvent) => void;
+  
+  // Focus management
+  focusRef?: React.RefObject<HTMLElement>;
+  
+  // Screen reader announcements
+  'aria-live'?: 'polite' | 'assertive';
+}
 ```
 
-### Platform-Specific Optimizations
+## 🔐 Security Implementation
 
-**Mobile:**
-- Touch-friendly navigation
-- Optimized scrolling
-- Reduced animation
-- Fast loading
+### Client-Side Security
+- **Input Validation** - Real-time validation with Zod
+- **CSRF Protection** - Form submission security
+- **Content Security Policy** - XSS prevention
+- **HTTPS Enforcement** - Secure connections only
 
-**Tablet:**
-- Two-column layouts where appropriate
-- Enhanced hover states
-- Optimal touch targets
-
-**Desktop:**
-- Large hero areas
-- 12-column grid
-- Advanced hover interactions
-- Full feature display
+### Server-Side Security (Future)
+- **Rate Limiting** - Request throttling
+- **Input Sanitization** - Data cleaning
+- **Authentication** - User verification
+- **Authorization** - Access control
 
 ## 📈 Analytics & Monitoring
 
 ### User Analytics
-- Page views and session duration
-- Conversion funnel tracking
-- Component interaction patterns
-- Device and browser statistics
+- **Page Views** - User journey tracking
+- **Conversion Funnels** - Lead generation monitoring
+- **Component Interactions** - Feature usage analysis
+- **Device Statistics** - Platform performance
 
 ### Performance Monitoring
-- Core Web Vitals tracking
-- Bundle size analysis
-- Loading performance metrics
-- Error tracking and reporting
+- **Core Web Vitals** - Real-time metrics
+- **Bundle Size** - Bundle analysis
+- **Loading Performance** - Speed monitoring
+- **Error Tracking** - Issue reporting
 
 ### A/B Testing Framework
-- Hero headline variations
-- CTA button text optimization
-- Form layout testing
-- Color scheme testing
+- **Hero Testing** - Headline variations
+- **CTA Testing** - Button text optimization
+- **Layout Testing** - Component variations
+- **Color Testing** - Theme comparisons
 
-## 🔒 Security
+## 🏗️ Code Quality Standards
 
-### Implementation
-- HTTPS everywhere
-- Input validation and sanitization
-- Rate limiting on endpoints
-- CSP (Content Security Policy)
-- XSS prevention
+### ESLint Configuration
+```json
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "no-console": ["warn", { "allow": ["error"] }]
+  }
+}
+```
 
-### Best Practices
-- Environment variable management
-- Secure password handling
-- API rate limiting
-- Error handling without information leakage
+### Prettier Formatting
+```json
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "arrowParens": "avoid"
+}
+```
 
-## 🎓 Technical Specifications
+### TypeScript Strict Mode
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
+}
+```
 
-### Component Standards
-- TypeScript first development
-- Component composition over inheritance
-- Responsive design patterns
-- Accessibility-first approach
-- Performance optimization
+## 📋 Quality Assurance
 
-### Build Pipeline
-- Automated linting
-- Type checking
-- Bundle analysis
-- Visual regression testing
-- Performance budgets
+### Pre-Commit Hooks
+```bash
+# Install lint-staged
+npm install lint-staged husky
 
-### Code Quality
-- ESLint + Prettier
-- TypeScript strict mode
-- Component documentation
-- Test coverage targets
+# Configure Husky
+npx husky install
+npx husky add .husky/pre-commit "npm run lint"
+
+# Install lint-staged
+npm install lint-staged
+npx husky set .husky/pre-commit "npx lint-staged"
+
+# Configure lint-staged
+lint-staged:
+  "src/**/*.tsx": ["eslint --fix", "git add"]
+  "src/**/*.ts": ["eslint --fix", "git add"]
+```
+
+### CI/CD Pipeline
+```yaml
+# .github/workflows/quality-check.yml
+name: Quality Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+```
+
+## 🔄 Internationalization (Future)
+
+### Language Support Architecture
+```typescript
+// i18n configuration interface
+interface TranslationKey {
+  en: string;
+  es?: string;
+  fr?: string;
+  pt?: string;
+  // ... other languages
+}
+
+export const TRANSLATIONS = {
+  'hero.title': {
+    en: 'Delivering Energy. Building Trust.',
+    es: 'Entregando Energía. Construyendo Confianza.',
+    fr: 'Livrant de l\'Énergie. Bâtissant de la Confiance.',
+    pt: 'Entregando Energia. Construindo Confiança.'
+  },
+  // ... more translations
+}
+```
+
+### Date & Number Localization
+- **Dates:** `new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })`
+- **Numbers:** `quantity.toLocaleString()` for thousands separators
+- **Currency:** Nigerian Naira formatting
+- **Time:** Lagos timezone (UTC+1)
 
 ## 🚀 Future Roadmap
 
 ### Phase 1 (Current)
-- Premium design system implementation
-- Full component modernization
-- Performance optimization
-- Accessibility compliance
+✅ Premium design system implementation
+✅ All 17 components developed
+✅ Production architecture established
+✅ Documentation complete
 
-### Phase 2 (Next 6 months)
-- Backend API development
-- Advanced form workflows
-- Real-time chat support
-- Customer portal
+### Phase 2 (Next 6 Months)
+🔄 Backend API development
+🔄 Advanced form workflows
+🔄 Real-time chat support
+🔄 Customer portal
 
-### Phase 3 (12 months)
-- Mobile app development
-- Advanced analytics dashboard
-- Multi-language support
-- AI-powered recommendations
+### Phase 3 (12 Months)
+🔄 Mobile app development
+🔄 Advanced analytics dashboard
+🔄 Multi-language support
+🔄 AI-powered recommendations
 
-## 📚 Documentation
+## 📚 Learning Resources
 
-### API Documentation
-- `src/types.ts` - Type definitions
-- `src/design-system.css` - Design tokens
-- Component docstrings and examples
+### Documentation Links
+- **Vite Docs:** https://vite.dev/guide/
+- **React:** https://react.dev/learn
+- **TypeScript:** https://www.typescriptlang.org/docs/
+- **Tailwind CSS:** https://tailwindcss.com/docs
+- **Heroicons:** https://heroicons.com/
+- **Framer Motion:** https://www.framer.com/motion/
 
-### Architecture Documents
-- `docs/architecture.md` - Technical architecture
-- `docs/design-tokens.md` - Design system
-- `docs/performance.md` - Optimization strategies
+### Best Practices Articles
+- [Performance Budgeting](https://web.dev/performance-budgets/)
+- [Accessibility in React](https://reactjs.org/docs/accessibility.html)
+- [SEO Best Practices](https://developers.google.com/search/docs/fundamentals/seo-starter)
+- [Mobile-First Design](https://web.dev/responsive-web-design-basics/)
 
-### Operational Documents
-- `docs/deployment.md` - Production deployment
-- `docs/monitoring.md` - Health checks and monitoring
-- `docs/support.md` - Troubleshooting guides
+### Community Resources
+- **GitHub Discussions:** Share experiences and get help
+- **Stack Overflow:** Component questions and solutions
+- **Discord Communities:** Real-time development support
+- **Dev.to Blog:** Technical articles and tutorials
 
-## 🆘 Support
+## 🏆 Success Metrics
 
-### Documentation
-- [README.md](README.md) - Project overview and setup
-- [Agent.md](Agent.md) - Technical architecture
-- [technical.md](technical.md) - Implementation details
+### Business Metrics
+- **Lead Generation:** Conversion rate >3%
+- **Inquiry Quality:** 90% qualified leads
+- **Response Time:** <24 hours to response
+- **Customer Satisfaction:** Net Promoter Score >45
 
-### Getting Help
-- GitHub Issues for bug reports
-- Support tickets for feature requests
-- Documentation for self-service
-- Team chat for urgent issues
+### Technical Metrics
+- **Performance:** 90+ Lighthouse score
+- **Accessibility:** 95+ Lighthouse score
+- **Security:** Zero high-severity vulnerabilities
+- **Uptime:** 99.9% availability target
 
-## 🤝 Contributing
+### User Experience Metrics
+- **First Load Time:** <2.5s
+- **Interaction Latency:** <100ms
+- **Content Engagement:** >60% scroll depth
+- **Mobile Usability:** >95% on mobile devices
 
-### Development Guidelines
-- Follow existing code patterns
-- Write TypeScript for all new code
-- Include unit tests for components
-- Update documentation for changes
-- Run linting before commits
+## 🌍 Global Ready Architecture
 
-### Code Review Standards
-- Code style compliance
-- Type safety verification
-- Performance impact assessment
-- Accessibility requirements
-- Documentation completeness
-
-## 📜 Legal & Compliance
-
-### Intellectual Property
-- Original design system
-- Component architecture
-- Photography sources properly attributed
-- MIT License for code
-
-### Data Privacy
-- GDPR compliance for forms
-- Contact information handling
-- Cookie policy documentation
-- Privacy-first approach
-
-## 🌍 Global Ready
-
-The website architecture is designed for future expansion:
+The website is designed for future international expansion:
 
 ```
 Nigeria
@@ -609,15 +540,22 @@ Nigeria
 └── International (global operations)
 ```
 
-All design decisions maintain the option to add:
-- New markets and regions
-- International compliance certifications
-- Multi-language support
-- Local payment methods
+Design decisions support:
+- **New Markets:** Localized content and compliance
+- **International Partners:** Multilingual support
+- **Global Operations:** Cross-border logistics
+- **Diversity:** Inclusive user experience
 
 ---
 
 **Built with ❤️ using Apple-standard design principles and React modern stack**
 **© 2024 SUN LITE LTD | Energy Supply, Built Around Reliability**
 
-This README provides a comprehensive overview of the SUN LITE LTD digital platform. For more detailed technical information, refer to `Agent.md` and `technical.md`.
+This restructured codebase provides a solid foundation for the SUN LITE LTD digital platform with:
+- Clear directory organization
+- Production-ready architecture
+- Comprehensive documentation
+- Future scalability
+- Quality assurance standards
+
+The new structure ensures maintainability, performance, and ease of deployment while following modern frontend development best practices.
