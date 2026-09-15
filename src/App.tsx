@@ -6,6 +6,7 @@ import { ProductsSection } from './components/ProductsSection';
 import { MarineSection } from './components/MarineSection';
 import { ServicesSection } from './components/ServicesSection';
 import { FAQSection } from './components/FAQSection';
+import { RequestSupplySection } from './components/RequestSupplySection';
 import { Footer } from './components/Footer';
 import { SupplyModal } from './components/SupplyModal';
 import { ProductCategory } from './types';
