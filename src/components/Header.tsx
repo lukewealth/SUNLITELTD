@@ -28,10 +28,13 @@ export const Header: React.FC<HeaderProps> = ({ onRequestSupplyClick }) => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Diesel & Products', href: '#products' },
     { name: 'Marine Bunkering', href: '#marine' },
-    { name: 'Services', href: '#services' },
     { name: 'Lagos Hubs', href: '#hubs' },
     { name: 'Compliance', href: '#compliance' },
     { name: 'FAQ', href: '#faq' },
@@ -96,6 +99,13 @@ export const Header: React.FC<HeaderProps> = ({ onRequestSupplyClick }) => {
                   key={link.name}
                   href={link.href}
                   className="text-sm font-semibold text-slate-600 hover:text-amber-600 transition-colors relative py-1"
+                  onClick={(e) => {
+                    // Handle hash links and route links
+                    if (link.href.startsWith('/')) {
+                      e.preventDefault();
+                      window.location.href = link.href;
+                    }
+                  }}
                 >
                   {link.name}
                 </a>
@@ -148,49 +158,53 @@ export const Header: React.FC<HeaderProps> = ({ onRequestSupplyClick }) => {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu (Clean Apple White Card) */}
-      {mobileMenuOpen && (
-        <div className="sm:hidden bg-white border-b border-slate-200 px-4 pt-4 pb-6 space-y-4 shadow-xl animate-in fade-in duration-200">
-          <div className="flex flex-col space-y-1 pb-3 border-b border-slate-100">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2.5 text-base font-semibold text-slate-800 hover:text-amber-600 hover:bg-slate-50 rounded-lg transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+            {/* Mobile Navigation (Route Links) */}
+            {mobileMenuOpen && (
+              <nav className="sm:hidden bg-white border-t border-slate-200 px-4 pt-4 pb-6 space-y-4 shadow-xl animate-in fade-in duration-200">
+                <div className="flex flex-col space-y-1 pb-3 border-b border-slate-100">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={
+                        link.href.startsWith('/')
+                          ? "block px-3 py-2.5 text-base font-semibold text-slate-800 hover:text-amber-600 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"
+                          : "block px-3 py-2.5 text-base font-semibold text-slate-800 hover:text-amber-600 hover:bg-slate-50 rounded-lg transition-colors"
+                      }
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
 
-          <div className="pt-1 space-y-3">
-            <div className="flex items-center gap-2 text-xs text-slate-500 px-3">
-              <ShieldCheckIcon className="w-4 h-4 text-amber-500" />
-              <span>Federal CAC: {COMPANY_INFO.rcNumber} · TIN: {COMPANY_INFO.tinNumber}</span>
-            </div>
+                <div className="pt-1 space-y-3">
+                  <div className="flex items-center gap-2 text-xs text-slate-500 px-3">
+                    <ShieldCheckIcon className="w-4 h-4 text-amber-500" />
+                    <span>Federal CAC: {COMPANY_INFO.rcNumber} · TIN: {COMPANY_INFO.tinNumber}</span>
+                  </div>
 
-            <a
-              href={`tel:${COMPANY_INFO.primaryPhone}`}
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-slate-200 text-slate-800 text-sm font-semibold bg-slate-50"
-            >
-              <PhoneIcon className="w-4 h-4 text-amber-600" />
-              <span>Call Dispatch: {COMPANY_INFO.primaryPhone}</span>
-            </a>
+                  <a
+                    href={`tel:${COMPANY_INFO.primaryPhone}`}
+                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-slate-200 text-slate-800 text-sm font-semibold bg-slate-50"
+                  >
+                    <PhoneIcon className="w-4 h-4 text-amber-600" />
+                    <span>Call Dispatch: {COMPANY_INFO.primaryPhone}</span>
+                  </a>
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onRequestSupplyClick();
-              }}
-              className="w-full py-3 rounded-full bg-amber-400 text-slate-950 font-black text-sm flex items-center justify-center gap-2 shadow-sm"
-            >
-              <span>Request Petroleum Supply</span>
-              <ArrowRightIcon className="w-4 h-4 stroke-[2.5]" />
-            </button>
-          </div>
-        </div>
-      )}
+                  <button
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      onRequestSupplyClick();
+                    }}
+                    className="w-full py-3 rounded-full bg-amber-400 text-slate-950 font-black text-sm flex items-center justify-center gap-2 shadow-sm"
+                  >
+                    <span>Request Petroleum Supply</span>
+                    <ArrowRightIcon className="w-4 h-4 stroke-[2.5]" />
+                  </button>
+                </div>
+              </nav>
+            )}
     </header>
   );
 };

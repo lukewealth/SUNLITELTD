@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { Header } from '../components/Header';
-import { Hero } from '../components/Hero';
-import { AboutSection } from '../components/AboutSection';
-import { ProductsSection } from '../components/ProductsSection';
-import { MarineSection } from '../components/MarineSection';
-import { ServicesSection } from '../components/ServicesSection';
-import { FAQSection } from '../components/FAQSection';
-import { RequestSupplySection } from '../components/RequestSupplySection';
-import { Footer } from '../components/Footer';
-import { SupplyModal } from '../components/SupplyModal';
-import { ProductCategory } from '../types';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { AboutSection } from './components/AboutSection';
+import { ProductsSection } from './components/ProductsSection';
+import { MarineSection } from './components/MarineSection';
+import { ServicesSection } from './components/ServicesSection';
+import { FAQSection } from './components/FAQSection';
+import { RequestSupplySection } from './components/RequestSupplySection';
+import { Footer } from './components/Footer';
+import { SupplyModal } from './components/SupplyModal';
+import { ProductCategory } from './types';
 import { PhoneIcon } from '@heroicons/react/24/outline';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO } from './data/companyData';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import new page components
