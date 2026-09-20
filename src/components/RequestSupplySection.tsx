@@ -280,7 +280,7 @@ export const RequestSupplySection: React.FC<RequestSupplyProps> = ({
 
                   <input
                     type="range"
-                    min="1000"
+                    min="200"
                     max="100000"
                     step="1000"
                     value={quantity}
@@ -288,23 +288,23 @@ export const RequestSupplySection: React.FC<RequestSupplyProps> = ({
                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
                   />
 
-                  {/* Volume Presets */}
-                  <div className="flex items-center gap-2 flex-wrap pt-1">
-                    {[5000, 10000, 22000, 33000, 45000, 60000].map((v) => (
-                      <button
-                        key={v}
-                        type="button"
-                        onClick={() => setQuantity(v)}
-                        className={`px-3 py-1 rounded-full text-xs font-mono-code transition-colors cursor-pointer ${
-                          quantity === v
-                            ? 'bg-amber-400 text-slate-950 font-bold shadow-xs'
-                            : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
-                        }`}
-                      >
-                        {v.toLocaleString()}L
-                      </button>
-                    ))}
-                  </div>
+                   {/* Volume Presets */}
+                   <div className="flex items-center gap-2 flex-wrap pt-1">
+                     {[200, 5000, 10000, 22000, 33000, 45000, 60000].map((v) => (
+                       <button
+                         key={v}
+                         type="button"
+                         onClick={() => setQuantity(v)}
+                         className={`px-3 py-1 rounded-full text-xs font-mono-code transition-colors cursor-pointer ${
+                           quantity === v
+                             ? 'bg-amber-400 text-slate-950 font-bold shadow-xs'
+                             : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
+                         }`}
+                       >
+                         {v.toLocaleString()}L
+                       </button>
+                     ))}
+                   </div>
                 </div>
 
                 {/* Step 3: Destination & Facility Type */}

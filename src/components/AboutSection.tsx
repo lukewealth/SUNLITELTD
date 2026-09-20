@@ -50,14 +50,8 @@ export const AboutSection: React.FC<AboutProps> = ({ onRequestSupplyClick }) => 
                 <ShieldCheckIcon className="w-6 h-6 stroke-[2]" />
               </div>
               <div>
-                <div className="text-xs font-bold uppercase tracking-wider text-amber-900">
-                  Verified Petroleum Enterprise
-                </div>
                 <div className="text-sm font-black text-slate-900 font-mono-code">
-                  CAC RC {COMPANY_INFO.rcNumber} · TIN {COMPANY_INFO.tinNumber}
-                </div>
-                <div className="text-[11px] text-amber-800">
-                  Incorporated under Federal Republic of Nigeria Companies & Allied Matters Act
+                  CAC {COMPANY_INFO.rcNumber} · TIN {COMPANY_INFO.tinNumber}
                 </div>
               </div>
             </div>
