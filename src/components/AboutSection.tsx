@@ -1,11 +1,9 @@
 import React from 'react';
-import { COMPANY_INFO } from '../data/companyData';
 import { APP_IMAGES } from '../data/assets';
 import {
   CheckCircleIcon,
   ShieldCheckIcon,
   ArrowRightIcon,
-  DocumentCheckIcon,
   SparklesIcon,
   PlayIcon,
 } from '@heroicons/react/24/outline';
@@ -43,18 +41,6 @@ export const AboutSection: React.FC<AboutProps> = ({ onRequestSupplyClick }) => 
             <p className="text-sm sm:text-base text-slate-500 leading-relaxed">
               In an operational environment where energy availability dictates business survival, we eliminate the stockouts, adulteration risks, and volume discrepancies common in petroleum procurement. We operate from three strategic hubs: Coconut, Apapa (Depot Base), Victoria Island (Commercial Office), and Lekki Phase 1 (Logistics Base).
             </p>
-
-            {/* Credential Callout Box (Echoing the yellow badge in landing page.png) */}
-            <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center font-black shrink-0 shadow-sm">
-                <ShieldCheckIcon className="w-6 h-6 stroke-[2]" />
-              </div>
-              <div>
-                <div className="text-sm font-black text-slate-900 font-mono-code">
-                  CAC {COMPANY_INFO.rcNumber} · TIN {COMPANY_INFO.tinNumber}
-                </div>
-              </div>
-            </div>
 
             {/* Checklist Feature Points */}
             <div className="space-y-3 pt-2">
