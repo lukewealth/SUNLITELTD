@@ -32,8 +32,6 @@ export const Header: React.FC<HeaderProps> = ({ onRequestSupplyClick }) => {
     { name: 'Services', href: '/services' },
     { name: 'Industries', href: '/industries' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Diesel & Products', href: '#products' },
-    { name: 'Marine Bunkering', href: '#marine' },
     { name: 'FAQ', href: '#faq' },
   ];
 
@@ -65,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestSupplyClick }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <a href="/" className="group focus:outline-none" aria-label="SUN LITE LTD Home">
-              <SunliteLogo size="md" lightText={false} />
+              <SunliteLogo size="sm" lightText={false} />
             </a>
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
