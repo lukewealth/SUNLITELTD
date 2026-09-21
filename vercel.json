@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "src/App.tsx",
-      "use": "@vitejs/plugin-react",
-      "config": {
-        "viteRoot": "."
-      }
+      "use": "vite"
     }
   ],
   "routes": [
@@ -16,14 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/$1",
-      "status": 200
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "dest": "/index.html"
     }
   ],
   "headers": [
