@@ -1,4 +1,16 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+interface VercelRequest {
+  method?: string;
+  body?: unknown;
+  headers?: Record<string, string>;
+  query?: Record<string, string>;
+}
+
+interface VercelResponse {
+  status: (code: number) => VercelResponse;
+  json: (body: unknown) => void;
+  end: () => void;
+  setHeader: (key: string, value: string) => void;
+}
 
 type InquiryType = 'contact' | 'supply';
 

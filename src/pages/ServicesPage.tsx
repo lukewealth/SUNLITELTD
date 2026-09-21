@@ -13,7 +13,6 @@ import {
   FireIcon,
   ScaleIcon,
   ChartBarIcon,
-  AnchorIcon,
 } from '@heroicons/react/24/outline';
 
 const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -115,7 +114,7 @@ export const ServicesPage: React.FC = () => {
                 {MARINE_SPECS.capabilities.map((cap, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-slate-900/50 rounded-xl border border-slate-800">
                     <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
-                      <AnchorIcon className="w-5 h-5 text-amber-400" />
+                      <GlobeAltIcon className="w-5 h-5 text-amber-400" />
                     </div>
                     <div>
                       <h3 className="text-white font-semibold">{cap.title}</h3>
