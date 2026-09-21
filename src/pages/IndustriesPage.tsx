@@ -13,9 +13,9 @@ import {
   ArrowRightIcon,
   CheckCircleIcon,
   BoltIcon,
-  FlameIcon,
   BeakerIcon,
   MapPinIcon,
+  FireIcon,
 } from '@heroicons/react/24/outline';
 
 const sectorIcons: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -30,7 +30,7 @@ const sectorIcons: Record<string, React.ComponentType<{ className?: string }>> =
 };
 
 const productIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Diesel (AGO)': FlameIcon,
+  'Diesel (AGO)': FireIcon,
   'Fuel (PMS)': BoltIcon,
   'Kerosene (DPK)': BeakerIcon,
   'Marine Diesel (Bunkering)': GlobeAltIcon,

@@ -11,7 +11,6 @@ import {
   ArrowRightIcon,
   CheckCircleIcon,
   FireIcon,
-  AnchorIcon,
   ScaleIcon,
   ChartBarIcon,
 } from '@heroicons/react/24/outline';
@@ -26,12 +25,21 @@ const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> 
 };
 
 export const ServicesPage: React.FC = () => {
+  const steps = [
+    { number: '01', title: 'Request & Quote', desc: 'Submit requirements via portal, phone, or email. Receive detailed quote with specs & timeline.', icon: ChartBarIcon },
+    { number: '02', title: 'Order Confirmation', desc: 'Confirm volume, grade, delivery window, and discharge location. Schedule tanker dispatch.', icon: CheckCircleIcon },
+    { number: '03', title: 'Pre-Dispatch QA', desc: 'Hydrometer density test, water-paste dip, seal verification. Batch certificate issued.', icon: ScaleIcon },
+    { number: '04', title: 'Secure Transit', desc: 'GPS-tracked tanker with anti-spill kits, grounding cables, and HSE-trained driver.', icon: TruckIcon },
+    { number: '05', title: 'Metered Discharge', desc: 'Calibrated meter discharge at your facility. Volumetric invoice generated on-site.', icon: FireIcon },
+    { number: '06', title: 'Post-Delivery', desc: 'Digital delivery receipt, batch certificate copy, and scheduled follow-up for reorder.', icon: ArrowRightIcon },
+  ];
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-slate-950 to-slate-900 py-20 lg:py-32 overflow-hidden text-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent" />
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23F3B51B" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 36v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") }} />
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23F3B51B\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 36v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E') " }} />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-wider mb-4">Our Services</p>
@@ -225,15 +233,6 @@ export const ServicesPage: React.FC = () => {
               From Request to Delivery — Seamless Execution
             </h2>
           </div>
-          
-          const steps = [
-            { number: '01', title: 'Request & Quote', desc: 'Submit requirements via portal, phone, or email. Receive detailed quote with specs & timeline.', icon: ChartBarIcon },
-            { number: '02', title: 'Order Confirmation', desc: 'Confirm volume, grade, delivery window, and discharge location. Schedule tanker dispatch.', icon: CheckCircleIcon },
-            { number: '03', title: 'Pre-Dispatch QA', desc: 'Hydrometer density test, water-paste dip, seal verification. Batch certificate issued.', icon: ScaleIcon },
-            { number: '04', title: 'Secure Transit', desc: 'GPS-tracked tanker with anti-spill kits, grounding cables, and HSE-trained driver.', icon: TruckIcon },
-            { number: '05', title: 'Metered Discharge', desc: 'Calibrated meter discharge at your facility. Volumetric invoice generated on-site.', icon: FireIcon },
-            { number: '06', title: 'Post-Delivery', desc: 'Digital delivery receipt, batch certificate copy, and scheduled follow-up for reorder.', icon: ArrowRightIcon },
-          ];
           
           <div className="grid lg:grid-cols-3 gap-6">
             {steps.map((step, index) => (
