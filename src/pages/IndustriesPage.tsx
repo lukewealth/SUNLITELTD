@@ -52,7 +52,7 @@ export const IndustriesPage: React.FC = () => {
       id: 'marine',
       name: 'Marine Ships & Vessels',
       icon: GlobeAltIcon,
-      description: 'Ocean-going vessels, offshore supply boats, tugs, and barges calling at Lagos ports and anchorages.',
+      description: 'Marine diesel supply for ocean-going vessels, offshore supply boats, tugs, and barges calling at Lagos ports and anchorages.',
       products: ['Marine Diesel (Bunkering)'],
       applications: ['Main Propulsion', 'Auxiliary Engines', 'Deck Machinery', 'Cargo Operations'],
       volume: '10,000L - 500,000L/call',

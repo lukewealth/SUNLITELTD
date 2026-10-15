@@ -59,6 +59,59 @@ npm run lint
 npm run build
 ```
 
+## Deployment
+
+This project uses an automated deployment workflow with two options:
+
+### Option 1: Manual Deployment (Recommended for control)
+
+Run the deployment script to build, test, and push changes:
+
+```bash
+# Make the script executable
+cd SUN\ LITE\ LTD  # Navigate to project directory
+chmod +x push-on-build.sh
+
+# Run the deployment script
+./push-on-build.sh
+```
+
+### Option 2: Automated CI/CD
+
+GitHub Actions automatically deploy to Vercel on every push to main:
+
+- Builds the project
+- Runs linting and tests
+- Deploys to Vercel
+- Stages and pushes changes to git
+
+### Deployment Script Features
+
+The `push-on-build.sh` script:
+- ✅ Stages all changes automatically
+- ✅ Creates descriptive commit messages with timestamps
+- ✅ Runs the build (`npm run build`)
+- ✅ Pushes to main branch only if build succeeds
+- ✅ Provides clear colored output for easy monitoring
+- ✅ Gracefully handles git configuration
+
+### Environment Setup
+
+Set up environment variables for deployment:
+
+```bash
+# In GitHub Actions secrets:
+RESEND_API_KEY
+INQUIRY_TO_EMAIL
+INQUIRY_FROM_EMAIL
+VERCEL_TOKEN
+VERCEL_ORG_ID
+VERCEL_PROJECT_ID
+VERCEL_SCOPE
+```
+
+For local development, copy `.env.example` to `.env.local` and add required keys.
+
 ## Form submissions (Resend)
 
 Contact and supply forms POST to **`/api/send-inquiry`**.

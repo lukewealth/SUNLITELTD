@@ -46,7 +46,7 @@ export const SunliteLogo: React.FC<LogoProps> = ({
             </span>
           </div>
           <span className="text-[9px] tracking-[0.18em] uppercase font-bold text-[#F3B51B]/90">
-            Energy · Logistics · Marine
+            Energy · Logistics · Services
           </span>
         </div>
       )}

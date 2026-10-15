@@ -6,6 +6,8 @@ import { CheckCircleIcon, PaperAirplaneIcon, EnvelopeIcon, DocumentDuplicateIcon
 
 interface RequestSupplyProps { initialProduct?: ProductCategory; }
 
+const volumeOptions = [200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000];
+
 export const RequestSupplySection: React.FC<RequestSupplyProps> = ({ initialProduct = 'Diesel (AGO)' }) => {
   const [product, setProduct] = useState<ProductCategory>(initialProduct);
   const [quantity, setQuantity] = useState(10000);
@@ -91,10 +93,29 @@ export const RequestSupplySection: React.FC<RequestSupplyProps> = ({ initialProd
                     ))}
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between"><label className="text-xs font-bold uppercase text-slate-700">Volume (L)</label><span className="font-mono font-black">{quantity.toLocaleString()}</span></div>
-                  <input type="range" min={200} max={100000} step={1000} value={quantity} onChange={(e) => setQuantity(Number(e.target.value))} className="w-full accent-amber-500" />
-                </div>
+                <fieldset className="space-y-3">
+                  <legend className="flex w-full justify-between gap-4 text-xs font-bold uppercase text-slate-700">
+                    <span>Volume (L)</span>
+                    <output className="font-mono font-black" aria-live="polite">{quantity.toLocaleString()} L</output>
+                  </legend>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {volumeOptions.map((volume) => (
+                      <button
+                        key={volume}
+                        type="button"
+                        aria-pressed={quantity === volume}
+                        onClick={() => setQuantity(volume)}
+                        className={`min-h-11 rounded-xl border px-3 py-2 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 ${
+                          quantity === volume
+                            ? 'border-amber-400 bg-amber-400 text-slate-950'
+                            : 'border-slate-200 bg-white text-slate-700 hover:border-amber-300'
+                        }`}
+                      >
+                        {volume.toLocaleString()} L
+                      </button>
+                    ))}
+                  </div>
+                </fieldset>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-1"><label className="text-xs font-bold uppercase text-slate-700">Destination</label>
                     <select value={destination} onChange={(e) => setDestination(e.target.value)} className="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm" required>

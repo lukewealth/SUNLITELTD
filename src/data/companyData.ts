@@ -138,7 +138,7 @@ export const PRODUCTS: ProductInfo[] = [
 
 export const MARINE_SPECS = {
   title: 'Marine Diesel & Vessel Bunkering',
-  headline: 'Precision Marine Fuel Logistics Across Lagos Ports & Coastal Anchorages',
+  headline: 'Precision Marine Diesel Logistics Across Lagos Ports & Coastal Anchorages',
   description: 'SUN LITE LTD operates a dedicated marine bunkering division servicing cargo ships, container vessels, tugboats, supply vessels, and barges. Operating from our Coconut, Apapa hub adjacent to Lagos ports, we coordinate round-the-clock deliveries with certified bunker delivery notes (BDN) and drip-sampling protocols.',
   capabilities: [
     {
@@ -181,7 +181,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'marine-bunkering',
     title: 'Marine Diesel & Bunkering',
     subtitle: 'Vessel Fuelling with Port Precision',
-    description: 'Specialised marine fuel delivery to vessels calling at Apapa ports, jetties, and offshore anchorages with strict maritime compliance and continuous flow control.',
+    description: 'Specialised marine diesel delivery to vessels calling at Apapa ports, jetties, and offshore anchorages with strict maritime compliance and continuous flow control.',
     iconName: 'GlobeAltIcon',
     keyFeatures: ['Bunker Delivery Note (BDN)', '24/7 berth-side pumping', 'Quality drip sampling'],
     sectorTag: 'Maritime & Shipping',
