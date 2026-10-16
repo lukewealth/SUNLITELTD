@@ -84,16 +84,16 @@ export const AboutPage: React.FC = () => {
                   <p className="text-amber-300 text-lg font-medium mt-1">Chief Executive Officer</p>
                 </div>
               </div>
-              {/* Experience Badge - Moved to right side */}
-              <div className="absolute -bottom-6 -right-6 lg:-right-12 bg-white rounded-2xl p-6 shadow-xl border border-slate-100 max-w-xs">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
-                    <BuildingOffice2Icon className="w-6 h-6 text-amber-600" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">15+ Years Experience</p>
-                    <p className="text-slate-900 font-bold text-sm">Global Trade Distribution</p>
-                  </div>
+            </div>
+            {/* Experience Badge - Moved 2X down outside image container */}
+            <div className="-mt-12 bg-white rounded-2xl p-6 shadow-xl border border-slate-100 max-w-xs">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
+                  <BuildingOffice2Icon className="w-6 h-6 text-amber-600" />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">15+ Years Experience</p>
+                  <p className="text-slate-900 font-bold text-sm">Global Trade Distribution</p>
                 </div>
               </div>
             </div>
