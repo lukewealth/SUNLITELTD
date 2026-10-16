@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs">
               <li><a href="/about" className="hover:text-amber-600 transition-colors">About SUN LITE</a></li>
               <li><a href="#products" className="hover:text-amber-600 transition-colors">Petroleum Products</a></li>
-              <li><a href="#marine" className="hover:text-amber-600 transition-colors">Marine Bunkering</a></li>
+              <li><a href="/services" className="hover:text-amber-600 transition-colors">Services</a></li>
               <li><a href="/services" className="hover:text-amber-600 transition-colors">Supply Capabilities</a></li>
               <li><a href="/industries" className="hover:text-amber-600 transition-colors">Industries</a></li>
               <li><a href="#faq" className="hover:text-amber-600 transition-colors">FAQ</a></li>
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
             </div>
             <ul className="space-y-2 text-xs">
               <li><a href="#products" className="hover:text-amber-600 transition-colors">Diesel (AGO) — Primary</a></li>
-              <li><a href="#marine" className="hover:text-amber-600 transition-colors">Marine Diesel Bunkering</a></li>
+              <li><a href="/services" className="hover:text-amber-600 transition-colors">Diesel Services</a></li>
               <li><a href="#products" className="hover:text-amber-600 transition-colors">Fuel (PMS) for Stations</a></li>
               <li><a href="#products" className="hover:text-amber-600 transition-colors">Kerosene (DPK) Storage</a></li>
               <li><a href="#contact" className="hover:text-amber-600 transition-colors">Request Custom Volume</a></li>

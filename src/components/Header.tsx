@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestSupplyClick }) => {
               <span>Call Dispatch: {COMPANY_INFO.primaryPhone}</span>
             </a>
             <button onClick={() => { setMobileMenuOpen(false); onRequestSupplyClick(); }} className="w-full py-3 rounded-full bg-amber-400 text-slate-950 font-black text-sm flex items-center justify-center gap-2 shadow-sm">
-              <span>Request Petroleum Supply</span>
+              <span>Request Diesel Supply</span>
               <ArrowRightIcon className="w-4 h-4 stroke-[2.5]" />
             </button>
           </div>

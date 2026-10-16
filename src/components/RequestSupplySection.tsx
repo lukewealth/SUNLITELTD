@@ -6,11 +6,19 @@ import { CheckCircleIcon, PaperAirplaneIcon, EnvelopeIcon, DocumentDuplicateIcon
 
 interface RequestSupplyProps { initialProduct?: ProductCategory; }
 
-const volumeOptions = [200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000];
+const volumePresets = [
+    { value: 10000, label: 'Standard (10,000L)' },
+    { value: 2000, label: 'Small (2,000L)' },
+    { value: 500, label: 'Medium (500L)' },
+    { value: 200, label: 'Small (200L)' },
+    { value: 1000, label: 'Large (1,000L)' },
+    { value: 5000, label: 'Extra Large (5,000L)' },
+  ];
 
 export const RequestSupplySection: React.FC<RequestSupplyProps> = ({ initialProduct = 'Diesel (AGO)' }) => {
   const [product, setProduct] = useState<ProductCategory>(initialProduct);
   const [quantity, setQuantity] = useState(10000);
+  const [selectedPreset, setSelectedPreset] = useState<number>(10000);
   const [facilityType, setFacilityType] = useState('Commercial Generator');
   const [destination, setDestination] = useState('Victoria Island, Lagos');
   const [customDestination, setCustomDestination] = useState('');
@@ -60,8 +68,8 @@ export const RequestSupplySection: React.FC<RequestSupplyProps> = ({ initialProd
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl space-y-4 mb-16">
           <div className="inline-flex items-center gap-2"><span className="w-6 h-1 bg-amber-400 rounded-full" /><span className="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">REQUEST SUPPLY</span></div>
-          <h2 className="font-display text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">Configure your petroleum or marine requisition.</h2>
-          <p className="text-base sm:text-lg text-slate-600">Lagos dispatch responds with calibrated meter schedules and batch certificates.</p>
+          <h2 className="font-display text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">Configure your diesel requisition.</h2>
+          <p className="text-base sm:text-lg text-slate-600">Lagos dispatch responds with calibrated meter schedules and batch certificates for your diesel supply needs.</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-8">
@@ -99,19 +107,22 @@ export const RequestSupplySection: React.FC<RequestSupplyProps> = ({ initialProd
                     <output className="font-mono font-black" aria-live="polite">{quantity.toLocaleString()} L</output>
                   </legend>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                    {volumeOptions.map((volume) => (
+                    {volumePresets.map((preset) => (
                       <button
-                        key={volume}
+                        key={preset.value}
                         type="button"
-                        aria-pressed={quantity === volume}
-                        onClick={() => setQuantity(volume)}
-                        className={`min-h-11 rounded-xl border px-3 py-2 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 ${
-                          quantity === volume
-                            ? 'border-amber-400 bg-amber-400 text-slate-950'
-                            : 'border-slate-200 bg-white text-slate-700 hover:border-amber-300'
+                        aria-pressed={selectedPreset === preset.value}
+                        onClick={() => { setQuantity(preset.value); setSelectedPreset(preset.value); }}
+                        className={`min-h-12 rounded-xl border px-3 py-3 text-sm font-bold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 ${
+                          selectedPreset === preset.value
+                            ? 'border-amber-500 bg-amber-50 text-amber-900 ring-2 ring-amber-200'
+                            : 'border-slate-200 bg-white text-slate-700 hover:border-amber-300 hover:bg-amber-25'
                         }`}
                       >
-                        {volume.toLocaleString()} L
+                        <div className="flex flex-col items-center gap-1">
+                          <span className="font-display text-base font-black">{preset.value.toLocaleString()} L</span>
+                          <span className="text-xs font-normal text-slate-600">{preset.label}</span>
+                        </div>
                       </button>
                     ))}
                   </div>

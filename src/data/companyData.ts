@@ -181,7 +181,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'marine-bunkering',
     title: 'Marine Diesel & Bunkering',
     subtitle: 'Vessel Fuelling with Port Precision',
-    description: 'Specialised marine diesel delivery to vessels calling at Apapa ports, jetties, and offshore anchorages with strict maritime compliance and continuous flow control.',
+    description: 'Specialised diesel delivery to vessels calling at Apapa ports, jetties, and offshore anchorages with strict maritime compliance and continuous flow control.',
     iconName: 'GlobeAltIcon',
     keyFeatures: ['Bunker Delivery Note (BDN)', '24/7 berth-side pumping', 'Quality drip sampling'],
     sectorTag: 'Maritime & Shipping',
