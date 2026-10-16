@@ -81,7 +81,7 @@ export const AboutPage: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p className="text-amber-400 text-sm font-semibold uppercase tracking-wider">Leadership</p>
                   <h3 className="text-white text-2xl font-bold mt-1">{ceo.name}</h3>
-                  <p className="text-amber-300 text-lg font-medium mt-1">{ceo.title}</p>
+                  <p className="text-amber-300 text-lg font-medium mt-1">Chief Executive Officer</p>
                 </div>
               </div>
               {/* Experience Badge */}
@@ -91,8 +91,8 @@ export const AboutPage: React.FC = () => {
                     <BuildingOffice2Icon className="w-6 h-6 text-amber-600" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Experience</p>
-                    <p className="text-slate-900 font-bold">15+ Years</p>
+                    <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">15+ Years Experience</p>
+                    <p className="text-slate-900 font-bold text-sm">Global Trade Distribution</p>
                   </div>
                 </div>
               </div>
@@ -108,11 +108,11 @@ export const AboutPage: React.FC = () => {
             {/* CEO Bio */}
             <div className="lg:col-span-2 space-y-8">
               <div className="border-l-4 border-amber-500 pl-6">
-                <p className="text-amber-400 text-sm font-semibold uppercase tracking-wider">Chief Executive Officer</p>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+                <p className="text-amber-400 text-xs font-semibold uppercase tracking-wider">Leadership</p>
+                <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-1">
                   {ceo.name}
                 </h2>
-                <p className="text-amber-300 text-lg font-medium mt-2">{ceo.title}</p>
+                <p className="text-amber-300 text-base font-medium mt-1">Chief Executive Officer</p>
               </div>
               
               <div className="prose prose-slate max-w-none">
